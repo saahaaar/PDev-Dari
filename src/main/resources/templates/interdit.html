@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="generator" content="PSPad editor, www.pspad.com">
+<title>Mots interdits</title>
+<style type="text/css">
+#pge{display:block;width:700px;margin:0 auto;}
+textarea {width:100%;height:200px;}
+</style>
+</head>
+<body>
+<div id="pge"><textarea id="txtZne">
+</textarea>
+<input type="button" value="Ok !" onclick="motus()">
+</div>
+<script type="text/javascript">
+function motus(){var inter="Lorem dolor orci";
+var rgx=new RegExp(inter.replace(/\s+/g,'|'),'ig');
+    document.getElementById('txtZne').value=document.getElementById('txtZne').value.replace(rgx,function(a){return new Array(a.length+1).join('*')})
+}
+</script>
+</body>
+</html>
